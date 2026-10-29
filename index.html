@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shroomcoin</title>
+</head>
+<body>
+
+<img src="island.png" width="480" height="470" style="float: right; max-width: 40%; height: auto; margin: 0 0 5em 5em;">
+
+<h1>shroomcoin</h1>
+
+<p><b>shroomcoin is a joke.</b> it is not an investment, it has no value, nobody is going to buy it
+from you, and nothing on this page is financial advice.</p>
+
+<h2>what is it</h2>
+
+<ul><li><p>an ERC-20 token on Arbitrum that gets given to people who find large
+        mushroom islands in Minecraft.</li></ul></p>
+
+<h2>what is it not</h2>
+
+<ul>
+<li>an investment</li>
+<li>a get rich quick scheme</li>
+<li>an offical project of Minecraft@Home</li>
+</ul>
+
+<h2>tokenomics</h2>
+
+<p>every seed you find is a candidate for a payout, once an island on a seed has paid out, you cannot submit a second island on that same seed</p>
+
+<pre>payout = <b>u</b> * 32^(<b>x</b> - 10) * (1 - 2^(6.5 - <b>x</b>))^(<b>n</b> - 1) SHROOM</pre>
+
+<ul>
+<li><b>x</b> = island size in millions of blocks (divided by 16 for large biome submissions)</li>
+<li><b>u</b> = 1, or 0.65 if the island is beyond the standard 30M world border (unbounded)</li>
+<li><b>n</b> = how many islands within the same 250k band have been found so far</li>
+</ul>
+
+<p>the payout formula is based off the rough approximation that finding an island with an extra million blocks in size (or 16M in large bioms) is 32x rarer.
+
+<h2>submitting an island</h2>
+
+submitting an island requires giving it to a trusted minter who will validate the size and pay the gas to mint your tokens, as a reward for doing this the minter will receive an additional 1% of the total minted value.
+<br><br>
+currently there is no automated mechanism for submitting new finds, this will change soon.
+
+<h2>useful links</h2>
+<ul>
+    <li><a href="https://github.com/MinecraftAtHome/COMMISSION" target="_blank">COMMISSION</a> (the main software people use for finding islands)</li>
+    <li><a href="https://discord.com/channels/720723932738486323/1406730684537766088" target="_blank">#large-mushroom-islands</a> (where most discussion happens)</li>
+    <li><a href="https://www.youtube.com/watch?v=5-1c9gxK9ac" target="_blank">ShowMe7's mushroom video</a></li>    
+    <!-- <li>#large-mushroom-islands:  (where most discussion happens)</li> -->
+</ul>
+</body>
+</html>
